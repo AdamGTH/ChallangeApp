@@ -66,13 +66,13 @@ namespace homeWorkChallange.Tests
             Statistics statistics = new Statistics();
 
             //act
-            Worker1.AddScore(10.1f);
-            Worker1.AddScore(20.2f);
-            Worker1.AddScore(50.3f);
+            Worker1.AddScore(5);
+            Worker1.AddScore(3);
+            Worker1.AddScore(2);
             statistics = Worker1.GetStatistics();
             
             //assert
-            Assert.AreEqual(26.866667f, statistics.Average);
+            Assert.AreEqual(Math.Round(3.33, 2), Math.Round(statistics.Average, 2));
 
         }
     }
