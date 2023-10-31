@@ -13,13 +13,14 @@ namespace homeWorkChallange.Tests
             Employee Worker1 = new Employee("Adam", "Nowak", 23);
 
             //act
-            Worker1.AddScore(10);
-            Worker1.AddScore(20);
+            Worker1.AddGrade(10);
+            Worker1.AddGrade(20);
             Worker1.SubScore(50);
             float res = Worker1.GetPoints;
 
             //assert
             Assert.AreEqual(-20, res);
+            
         }
 
         [Test]
@@ -30,9 +31,9 @@ namespace homeWorkChallange.Tests
             Statistics statistics = new Statistics();
 
             //act
-            Worker1.AddScore(10.33f);
-            Worker1.AddScore(20.33f);
-            Worker1.AddScore(50.33f);
+            Worker1.AddGrade(10.33f);
+            Worker1.AddGrade(20.33f);
+            Worker1.AddGrade(50.33f);
             statistics = Worker1.GetStatistics();
 
             //assert
@@ -48,9 +49,9 @@ namespace homeWorkChallange.Tests
             Statistics statistics = new Statistics();
 
             //act
-            Worker1.AddScore(10.33f);
-            Worker1.AddScore(20.33f);
-            Worker1.AddScore(50.33f);
+            Worker1.AddGrade(10.33f);
+            Worker1.AddGrade(20.33f);
+            Worker1.AddGrade(50.33f);
             statistics = Worker1.GetStatistics();
 
             //assert
@@ -66,9 +67,9 @@ namespace homeWorkChallange.Tests
             Statistics statistics = new Statistics();
 
             //act
-            Worker1.AddScore(5);
-            Worker1.AddScore(3);
-            Worker1.AddScore(2);
+            Worker1.AddGrade(5);
+            Worker1.AddGrade(3);
+            Worker1.AddGrade(2);
             statistics = Worker1.GetStatistics();
             
             //assert

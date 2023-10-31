@@ -28,11 +28,36 @@ namespace HomeWork
             this.Age = 0;
            
         }
-        public void AddScore(float points)
+        public void AddGrade(float grade)
         {
-            this.Grades.Add(points);
+            if (grade >= 0 && grade <= 100)
+            {
+                this.Grades.Add(grade);
+            }
+            else
+                Console.WriteLine("Invalid data");
+           
         }
-        
+        public void AddGrade(string grade)
+        {
+            if (float.TryParse(grade, out var points))
+            {
+                this.AddGrade(points);
+            }
+            else
+                Console.WriteLine("Value is not float");
+        }
+        public void AddGrade(double grade)
+        {
+           AddGrade((float)grade);
+        }
+
+        public void AddGrade(long grade)
+        {
+            AddGrade((float)grade);
+
+        }
+
         public void SubScore(uint points)
         {
             int change = 0 - (int)points;
