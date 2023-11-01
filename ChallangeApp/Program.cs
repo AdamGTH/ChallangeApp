@@ -1,13 +1,23 @@
 ﻿using HomeWork;
 
-Employee worker1 = new Employee("Andrzej", "Nowak", 23);
-
-worker1.AddGrade("Adam");
-worker1.AddGrade("6000");
-worker1.AddGrade(2);
-worker1.AddGrade(5);
-worker1.AddGrade(6);
-
-Console.WriteLine($"Max: {worker1.GetStatistics().Max}");
-Console.WriteLine($"Min: {worker1.GetStatistics().Min}");
-Console.WriteLine($"Average: {worker1.GetStatistics().Average:N2}");
+Console.WriteLine("Witamy w Programie XYZ do oceny pracownikow");
+Console.WriteLine("============================================");
+Console.WriteLine();
+Console.WriteLine("Podaj ocene pracownika:");
+var input = Console.ReadLine();
+Employee worker1 = new Employee();
+worker1.AddGrade(input);
+while (true)
+{
+    Console.WriteLine("Podaj kolejna ocene lub 'q' aby wyjsc i wyswietlic statystyki");
+    input = Console.ReadLine();
+    if (input == "q")
+    {
+        break;
+    }
+    worker1.AddGrade(input);
+}
+var statistics = worker1.GetStatistics();
+Console.WriteLine($"Average: {statistics.Average:N2}");
+Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Max: {statistics.Max}");
