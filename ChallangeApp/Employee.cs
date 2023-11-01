@@ -37,7 +37,8 @@ namespace HomeWork
                 this.Grades.Add(grade);
             }
             else
-                Console.WriteLine("Invalid data");
+                throw new Exception("Invalid data");
+                
            
         }
         public void AddGrade(string grade)
@@ -47,7 +48,8 @@ namespace HomeWork
                 this.AddGrade(points);
             }
             else
-                Console.WriteLine("Value is not float");
+                throw new Exception("Value is not float");
+            
         }
         public void AddGrade(double grade)
         {
@@ -89,9 +91,8 @@ namespace HomeWork
                     break;
 
                 default:
-                    Console.WriteLine("Grade is Wrong");
-                    break;
-
+                    throw new Exception("Wrong letter");
+                    
             }
         }
         public void SubScore(uint points)

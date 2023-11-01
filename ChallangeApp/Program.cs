@@ -15,7 +15,15 @@ while (true)
     {
         break;
     }
-    worker1.AddGrade(input);
+    try
+    {
+        worker1.AddGrade(input);
+    }
+    catch(Exception ex)
+    {
+        Console.WriteLine($"Exeption catched: {ex.Message}");
+    }
+    
 }
 var statistics = worker1.GetStatistics();
 Console.WriteLine($"Average: {statistics.Average:N2}");
