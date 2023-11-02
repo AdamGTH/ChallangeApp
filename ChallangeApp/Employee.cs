@@ -67,27 +67,27 @@ namespace HomeWork
             {
                 case 'A':
                 case 'a':
-                    this.Grades.Add(100);
+                    this.AddGrade(100);
                     break;
 
                 case 'B':
                 case 'b':
-                    this.Grades.Add(80);
+                    this.AddGrade(80);
                     break;
 
                 case 'C':
                 case 'c':
-                    this.Grades.Add(60);
+                    this.AddGrade(60);
                     break;
 
                 case 'D':
                 case 'd':
-                    this.Grades.Add(40); 
+                    this.AddGrade(40); 
                     break;
 
                 case 'E':
                 case 'e':
-                    this.Grades.Add(20);
+                    this.AddGrade(20);
                     break;
 
                 default:
