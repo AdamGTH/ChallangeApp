@@ -3,10 +3,13 @@
 Console.WriteLine("Witamy w Programie XYZ do oceny pracownikow");
 Console.WriteLine("============================================");
 Console.WriteLine();
+
+Employee worker1 = new Employee();
+
 Console.WriteLine("Podaj ocene pracownika:");
 var input = Console.ReadLine();
-Employee worker1 = new Employee();
 worker1.AddGrade(input);
+
 while (true)
 {
     Console.WriteLine("Podaj kolejna ocene lub 'q' aby wyjsc i wyswietlic statystyki");
