@@ -4,17 +4,8 @@ Console.WriteLine("Witamy w Programie XYZ do oceny pracownikow");
 Console.WriteLine("============================================");
 Console.WriteLine();
 
-Employee worker1 = new Employee();
-try
-{
-    Employee worker2 = new Employee("Adam", "KOwalczyk", 22, "men");
-}
-catch(Exception ex)
-{
-    Console.WriteLine(ex.ToString());
-}
-
 Console.WriteLine("Podaj ocene pracownika:");
+Employee worker1 = new Employee("Adam", "Kowal");
 var input = Console.ReadLine();
 worker1.AddGrade(input);
 

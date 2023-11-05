@@ -7,7 +7,7 @@ namespace HomeWork;
 
 public class Employee : IEmployee
 {
-    public Employee(string name, string surname, int age, string gender)
+    public Employee(string name, string surname)
     {
         this.Name = name;
         this.Surname = surname;
