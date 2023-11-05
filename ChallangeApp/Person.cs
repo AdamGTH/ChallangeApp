@@ -15,16 +15,24 @@ namespace ChallangeApp
             this.Name = name;
             this.Surname = surname;
             this.Age = age;
-            if (gender == "K" || gender == "k" || gender == "M" || gender == "m")
-            {
-                this.Gender = gender;
-            }
-            else
-                throw new Exception("Invalid Gender Name, You should use 'M' or 'K'");
+            this.Gender = gender;
         }
         public string Name { get; private set; }
         public string Surname { get; private set; }
         public int Age { get; private set; }
-        public string Gender { get; private set; }
+        public string Gender { get { return this.Gender; } 
+            set 
+            {
+                if (value == "K" || value == "M")
+                {
+                    this.Gender = value;
+                }
+                else
+                {
+                    throw new Exception("Invalid Gender Name, You should use 'M' or 'K'");
+                }
+            
+            } 
+        }
     }
 }

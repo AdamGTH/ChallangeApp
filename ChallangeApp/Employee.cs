@@ -5,13 +5,16 @@ using ChallangeApp;
 
 namespace HomeWork;
 
-public class Employee : Person
+public class Employee : IEmployee
 {
-    public Employee(string name, string surname, int age, string gender) 
-        : base(name, surname, age, gender) { }
-
-    public Employee() 
-        : base() { }
+    public Employee(string name, string surname, int age, string gender)
+    {
+        this.Name = name;
+        this.Surname = surname;
+    }
+      
+    public string Name {  get; private set; }
+    public string Surname { get; private set; } 
 
     List<float> Grades = new List<float>();
     public float GetPoints
