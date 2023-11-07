@@ -12,7 +12,6 @@ namespace ChallangeApp
         void AddGrade(double grade);
         void AddGrade(long grade);
         void AddGrade(char grade);
-        void SubScore(uint points);
         Statistics GetStatistics();
 
     }
