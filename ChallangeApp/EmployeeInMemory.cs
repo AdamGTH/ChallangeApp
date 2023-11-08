@@ -11,11 +11,18 @@ namespace ChallangeApp
         }
 
         List<float> Grades = new List<float>();
+
+        public override event GradeAddedDelegate GradeAdded;
+
         public override void AddGrade(float grade)
         {
             if (grade >= 0 && grade <= 100)
             {
                 this.Grades.Add(grade);
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
             }
             else
                 throw new Exception("Invalid data");

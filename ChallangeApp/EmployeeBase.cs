@@ -11,6 +11,8 @@ namespace ChallangeApp
             this.Surname = surname;
             
         }
+        public delegate void GradeAddedDelegate(object sender, EventArgs args);
+        public abstract event GradeAddedDelegate GradeAdded;
         public string Name { get; private set; }
         public string Surname { get; private set; }
         public abstract void AddGrade(float grade);
