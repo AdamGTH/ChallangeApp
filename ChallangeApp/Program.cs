@@ -1,16 +1,17 @@
 ﻿using ChallangeApp;
-using HomeWork;
+
 
 Console.WriteLine("Witamy w Programie XYZ do oceny pracownikow");
 Console.WriteLine("============================================");
 Console.WriteLine();
 
-EmployeeInMemory worker1 = new EmployeeInMemory("Adam", "Kowalski");
+EmployeeInFile worker1 = new EmployeeInFile("Adam", "Kowalski");
 worker1.GradeAdded += GradesAdded;
 
 Console.WriteLine("Podaj ocene pracownika:");
 var input = Console.ReadLine();
 worker1.AddGrade(input);
+
 
 while (true)
 {
@@ -36,5 +37,5 @@ Console.WriteLine($"Min: {statistics.Min}");
 Console.WriteLine($"Max: {statistics.Max}");
 void GradesAdded(object sender, EventArgs args)
 {
-    Console.WriteLine("Zostala dodana ocena");
+    Console.WriteLine("Zostala dodana ocena z eventu");
 }
